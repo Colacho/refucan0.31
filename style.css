@@ -1,0 +1,107 @@
+.containergeneral {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+form button {
+    margin: 10px;
+}
+
+/* -----INICIO HEADER------ */
+
+    header {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .logo {
+        
+        border: 2px solid orange;
+        border-radius: 50%;
+        max-width: 150px;
+        
+    }
+
+
+/* ------FIN HEADER------ */
+
+/* ------NAV BAR -----*/
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px; 
+        background-image: linear-gradient(#ffc107, #adb5bd, #ffc107 );
+    }
+
+
+/* -----FIN NAVBAR -----*/
+
+/* ----- INICIO CENTRO -----*/
+main {
+    display: flex;
+    height: 100vh;
+    background-image: url("images/fondo2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+.logocentral {
+    border: 2px solid orange;
+    border-radius: 50%;
+    
+    
+}
+
+.central {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    align-items: center;
+}
+
+/* ----- FIN CENTRO -----*/
+
+/* -----INICIO BUSCAR-----*/
+
+.mainBusqueda {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formBusqueda {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.inputBuscar {
+    border-radius: 5px;
+}
+
+
+/* -----FIN BUSCAR-----*/
+
+/* -----INICIO NOTICIA -----*/
+
+.tablanoticias {
+    width: 70%;
+    
+}
+
+/* -----FIN NOTICIA -----*/
+.botones {
+    border-radius: 5px;
+    padding: 10px 25px;
+    height: 5em;
+}
+
