@@ -1,10 +1,6 @@
-<?php
-session_start();
-
-
-?>
 <!DOCTYPE html>
 <html>
+
     <?php
         include('componentes\head.php')
     ?>
@@ -56,34 +52,37 @@ session_start();
                 <!-- FIN CARRUSEL -->
                 <div class="botones">
                     <a class="btn btn-warning btn-lg" role="button" href="index.php">Volver</a>
-                    <a <?php echo 'style="display: '.$visible.';"' ?> class="btn btn-warning btn-lg" role="button" href="cargarNoticia.php">Cargar Noticia</a>
                 </div>
                 <div class="tablanoticias">
                     <?php
                             
                             $con = mysqli_connect('localhost', 'root', '', 'refucan') or die('Error al conectarse');
                     
-                            $consulta = "SELECT * FROM noticias ORDER BY fecha DESC";
+                            $consulta = "SELECT * FROM animales WHERE buscado = 'Si'";
                     
                             $resultado = mysqli_query($con, $consulta);
                         ?>
                         <table class="table table-light table-striped">
                             <thead class="table table-dark" >
-                                <th scope="col">Fecha</th>
-                                <th scope="col">Noticia</th>
+                                <th >Foto</th>
+                                <th >Nombre</th>
+                                <th >Datos</th>
                             </thead>
                             <tbody>
                             <?php while($row = mysqli_fetch_assoc($resultado)) { 
                                 echo '
-                                <tr>
-                                    <td>'.$row['fecha'].'</td>
-                                    <td>'.$row['texto'].'</td>
-                                </tr>
-                                ';
                                 
+                                    <tr>
+                                        <td >
+                                            <img height="50px" src="fotos/'.$row['foto'].'">
+                                        </td>
+                                        <td>'.$row['nombre'].'</td>
+                                        <td>'.$row['buscado_datos'].'</td>
+                                    </tr>
+                                
+                                ';                             
                             } 
-                            mysqli_close($con);
-                            
+                            mysqli_close($con);    
                         ?>
                             </tbody>
                         </table>

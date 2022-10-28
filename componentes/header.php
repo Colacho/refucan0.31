@@ -1,6 +1,7 @@
 <?php
-
-if(isset($_SESSION)){
+error_reporting(0);
+$session = $_SESSION['usuario']; 
+if($session != null){
     $saludo = "Bienvenido $session";
     $visible = "";
     

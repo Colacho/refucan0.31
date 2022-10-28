@@ -5,21 +5,21 @@ $contraseña=$_POST['password'];
 session_start();
 $_SESSION['usuario']=$usuario;
 
-
 $conexion=mysqli_connect("localhost","root","","refucan");
 
 $consulta="SELECT*FROM usuarios where usuario='$usuario' and pass='$contraseña'";
 $resultado=mysqli_query($conexion,$consulta);
 
 $filas=mysqli_fetch_array($resultado);
-
+$cargo = $filas['cargo_id'];
+$_SESSION['cargo']=$cargo; 
 if($filas['cargo_id']==1){ //administrador
     
     header("location:index.php");
 
 }else
 if($filas['cargo_id']==2){ //cliente
-    $cargo = 2;
+    
     header("location:index.php");
 }
 else{

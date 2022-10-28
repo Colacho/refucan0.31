@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    
+    
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -15,7 +22,7 @@
         <main >
             <div class="central">
                 <div>
-                <img class="logocentral imgcentral" src="images/logo2.jpeg"/>
+                    <img class="logocentral imgcentral" src="images/logo2.jpeg"/>
                 </div>
                 <div >
                     <div>
@@ -28,15 +35,11 @@
                                 <label for="password">Password</label>
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                             </div>
-                            
-                            <div >
+                            <div class="botones">
                                 <button type="submit" value="" name="ingresar" class="btn btn-warning btn-lg">Ingresar</button>
                                 <a class="btn btn-warning btn-lg" href="noticias.php">Noticias</a>
                             </div>
                         </form>
-                
-                
-            
                     </div>
                 </div>
             </div>

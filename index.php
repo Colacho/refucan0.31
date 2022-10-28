@@ -1,13 +1,14 @@
 <?php
-
 session_start();
 $session = $_SESSION['usuario']; 
+if($session == null) {
+    header("location:login.php");
+    session_destroy();
+    echo $error;
+    exit();
 
-if (!isset($session)) {
-        session_destroy();
-        header('location:login.php');
-        exit();
-} 
+}
+
 
 ?>
 

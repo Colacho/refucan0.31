@@ -1,14 +1,15 @@
 <?php
 
 session_start();
-$session = $_SESSION['usuario'];
-
-
-if (!isset($session)) {
+$session = $_SESSION['usuario']; 
+$cargo = $_SESSION['cargo'];
+if($session == null) {
+    $error = include('componentes\error.php');
     session_destroy();
-    header('location:login.php');
+    echo $error;
     exit();
-} 
+
+}
 
 ?>
 
@@ -24,8 +25,7 @@ if (!isset($session)) {
         <?php
             include('componentes\header.php');
             include('componentes\navBar.php');
-            
-        ?>
+            ?>
         <main>
             
             <div class="central">
@@ -34,13 +34,24 @@ if (!isset($session)) {
                 <div class="accordion" id="accordionExample">
                     
                     <?php
-                    include('componentes\cargarAnimal.php');
-                    include('componentes\cargarPersona.php');
-                    include('componentes\cargarProtectora.php')
+                    if($cargo == 1) {
+                        include('componentes\cargarAnimal.php');
+                        include('componentes\cargarProtectora.php');
+                        include('componentes\cargarUsuario.php');
+                        
+                    } else {
+                        
+                        include('componentes\cargarAnimal.php');
+                        include('componentes\cargarProtectora.php');
+                    }
+                    
+                    
                     ?>
 
                 </div>
-                <a type="button" class="btn btn-warning btn-lg" href="index.php">Volver al inicio</a>
+                <div class="botones">
+                    <a type="button" class="btn btn-warning btn-lg" href="index.php">Volver al inicio</a>
+                </div>
             </div> 
         </main>
             

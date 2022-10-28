@@ -12,17 +12,19 @@
             include('componentes\navBar.php')
         ?>
 
-        <main class="carganoticia">
-            <form action="cargarnoticia.php" method="POST">
-                <fieldset>
-                    <legend>Nueva Noticia</legend>
-                    <textarea cols="40" rows="5" name="texto"></textarea><br>
-                    
-                    <button type="submit" name="carga" class="btn btn-light btn-lg">Cargar</button>
-                    <button class="btn btn-light btn-lg" ><a href="noticias.php">Volver</a></button>
-                </fieldset>
-            </form>
-            
+        <main>
+            <div class="central">
+                <form action="cargarnoticia.php" method="POST">
+                    <fieldset>
+                        <legend>Nueva Noticia</legend>
+                        <textarea cols="40" rows="5" name="texto"></textarea><br>
+                        <div class="botones">
+                            <button type="submit" name="carga" class="btn btn-warning btn-lg">Cargar</button>
+                            <button class="btn btn-warning btn-lg" ><a href="noticias.php">Volver</a></button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div> 
         </main>
         <?php
             if (isset($_POST['carga'])) {

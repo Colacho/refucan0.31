@@ -7,9 +7,6 @@
     
 }
 
-form button {
-    margin: 10px;
-}
 
 /* -----INICIO HEADER------ */
 
@@ -64,6 +61,7 @@ main {
     flex-direction: column;
     flex: 3;
     align-items: center;
+    height: 100vh;
 }
 
 /* ----- FIN CENTRO -----*/
@@ -94,11 +92,35 @@ main {
 /* -----INICIO NOTICIA -----*/
 
 .tablanoticias {
-    width: 70%;
-    
+    width: 70%;  
 }
 
 /* -----FIN NOTICIA -----*/
+
+/* -----CARGAR DATOS-----*/
+
+#formCarga > fieldset > div {
+    padding: 2px;
+}
+
+/* -----FIN CARGAR DATOS-----*/
+
+.editarField {
+    display: flex;
+    align-content: space-between;
+}
+
+.editarCampos {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+}
+
+
 .botones {
     border-radius: 5px;
     padding: 10px 25px;
