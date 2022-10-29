@@ -1,6 +1,6 @@
 <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" style="background-color: #ffc107;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <button class="accordion-button collapsed" style="color:#adb5bd; background-color: #212529;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
         Carga de Usuarios
         </button>
     </h2>
@@ -24,14 +24,13 @@
                     <div>
                         <label>Nivel</label>
                         <select id="cargo_id" name="cargo_id">
-                                            <option value="1">Administrador</option>
-                                            <option value="2">Protectora</option>
-                                            
+                            <option value="1">Administrador</option>
+                            <option value="2">Protectora</option>               
                         </select>
                     </div>
                     
                     <div>
-                        <button type="submit" name="formUsuario" class="btn btn-warning btn-lg" >Cargar</button>
+                        <button type="submit" name="formUsuario" class="btn btn-dark btn-lg" >Cargar</button>
                     </div>
                 </fieldset>
                 

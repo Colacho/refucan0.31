@@ -28,27 +28,24 @@ if($session == null) {
     ?>
     <main class="mainBusqueda">
 
-<?php
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		date_default_timezone_set('America/Argentina/Buenos_Aires');
-		$fechaActual = date("Y-m-d");
-		$id = $_POST['animal_id'];
-		
-		$con = mysqli_connect('localhost', 'root', '', 'refucan') or die('Error al conectarse');
-		$consulta = "SELECT * FROM animales 
-					JOIN historia_clinica
-					WHERE animal_id = clinica_id AND animal_id = '$id'
-                    ";
-                    $resultado = mysqli_query($con, $consulta);
-                    mysqli_close($con);
-					
-					  
-					
-				}
-	while($row = mysqli_fetch_assoc($resultado)) {  
+		<?php
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+				date_default_timezone_set('America/Argentina/Buenos_Aires');
+				$fechaActual = date("Y-m-d");
+				$id = $_POST['animal_id'];
+				
+				$con = mysqli_connect('localhost', 'root', '', 'refucan') or die('Error al conectarse');
+				$consulta = "SELECT * FROM animales 
+							JOIN historia_clinica
+							WHERE animal_id = clinica_id AND animal_id = '$id'
+							";
+							$resultado = mysqli_query($con, $consulta);
+							mysqli_close($con);	
+						}
+			while($row = mysqli_fetch_assoc($resultado)) {  
 
-?>
-		<form method="POST" enctype="multipart/form-data">
+		?>
+		<form id="p" method="POST" enctype="multipart/form-data">
 			<legend>Datos a modificar</legend>
 			<div class="editarField" >
 				<!-- DATOS DEL ANIMAL -->
@@ -221,7 +218,7 @@ if($session == null) {
 					</div>
 					<div>
 						<label>Datos de busqueda:</label><br>
-						<textarea cols="40" rows="5" name="datos_buscado"><?php echo $row['buscado_datos']?></textarea>
+						<textarea cols="40" rows="5" name="buscado_datos"><?php echo $row['buscado_datos']?></textarea>
 					</div>
 					<div>
 						<label>Protectora:</label><br>
@@ -243,9 +240,9 @@ if($session == null) {
 					</div>
 				</div>
 			</div>
-				<div>
-					<button type="submit" class="btn btn-warning btn-lg" name="modificar">Modificar</button>
-					<a type="button" class="btn btn-warning btn-lg" href="index.php">Volver</a>
+				<div class="botones">
+					<button type="submit" class="btn btn-dark btn-lg" name="modificar">Modificar</button>
+					<a type="button" class="btn btn-dark btn-lg" href="index.php">Volver</a>
 				</div>                 
 		</form>
 
@@ -254,6 +251,9 @@ if($session == null) {
 			}
 		?>
 	</main>
+	<?php
+        include('componentes\footer.php')
+    ?>
 </body>
 </html>       
 

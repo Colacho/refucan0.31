@@ -29,12 +29,12 @@ if($session == null) {
         <main>
             <div class="central">
                 <div>
-                <img class="logocentral imgcentral" src="images/logo2.jpeg"/>
+                    <img class="logocentral" src="images/logo2.jpeg"/>
                 </div>
                 <div class="botones">         
-                    <a class="btn btn-warning btn-lg" role="button" href="buscar.php">Buscar</a>
-                    <a class="btn btn-warning btn-lg" role="button" href="noticias.php">Noticias</a>
-                    <a class="btn btn-warning btn-lg" role="button" href="cargar.php">Cargar</a>    
+                    <a class="btn btn-dark btn-lg" role="button" href="buscar.php">Buscar</a>
+                    <a class="btn btn-dark btn-lg" role="button" href="noticias.php">Noticias</a>
+                    <a class="btn btn-dark btn-lg" role="button" href="cargar.php">Cargar</a>    
                 </div>
             </div>
         </main>

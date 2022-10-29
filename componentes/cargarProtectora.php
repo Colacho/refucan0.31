@@ -1,6 +1,6 @@
 <div class="accordion-item">
     <h2 class="accordion-header" id="headingThree">
-        <button class="accordion-button collapsed" style="background-color: #ffc107;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <button class="accordion-button collapsed" style="color:#adb5bd; background-color: #212529;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         Carga de Protectoras
         </button>
     </h2>
@@ -30,7 +30,7 @@
                         <input type="text" name="telefono" placeholder="Telefono" size="30"/>
                     </div>
                     <div>
-                        <button type="submit" name="protectora" class="btn btn-warning btn-lg" >Cargar</button>
+                        <button type="submit" name="protectora" class="btn btn-dark btn-lg" >Cargar</button>
                     </div>
                 </fieldset>
                 
@@ -48,8 +48,7 @@ if (isset($_POST['protectora'])) {
         '".$_POST["responsable_nombre"]."', 
         '".$_POST["responsable_apellido"]."', 
         '".$_POST["responsable_dni"]."', 
-        '".$_POST["telefono"]."' 
-        
+        '".$_POST["telefono"]."'   
         )";
         $resultado = mysqli_query($con, $sql) or die('Error de consulta');
     mysqli_close($con);

@@ -10,7 +10,7 @@ if($session != null){
     $visible = "none";
 }
 ?>
-<header class="bg-warning">
+<header>
     <div>
         <a href="index.php">
             <img class="logo" src="images/logo2.jpeg"/>

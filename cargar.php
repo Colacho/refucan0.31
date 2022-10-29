@@ -50,7 +50,7 @@ if($session == null) {
 
                 </div>
                 <div class="botones">
-                    <a type="button" class="btn btn-warning btn-lg" href="index.php">Volver al inicio</a>
+                    <a type="button" class="btn btn-dark btn-lg" href="index.php">Volver al inicio</a>
                 </div>
             </div> 
         </main>

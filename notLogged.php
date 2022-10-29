@@ -17,8 +17,8 @@
                 <div>
                 <img class="logocentral imgcentral" src="images/logo2.jpeg"/>
                 </div>
+                <h1>Usuario o contraseña incorrecto</h1>
                 <div >
-                    <h1>Usuario o contraseña incorrecto</h1>
                     <div>
                         <form action="validar.php" method="POST">
                             <div class="form-group">
@@ -30,9 +30,9 @@
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                             </div>
                             
-                            <div >
-                                <button type="submit" value="" name="ingresar" class="btn btn-warning btn-lg">Ingresar</button>
-                                <a class="btn btn-warning btn-lg" href="noticias.php">Noticias</a>
+                            <div class="botones" >
+                                <button type="submit" value="" name="ingresar" class="btn btn-dark btn-lg">Ingresar</button>
+                                <a class="btn btn-dark btn-lg" href="noticias.php">Noticias</a>
                             </div>
                         </form>
                 

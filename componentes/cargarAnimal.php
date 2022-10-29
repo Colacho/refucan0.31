@@ -1,7 +1,7 @@
 
 <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button collapsed" style="background-color: #ffc107;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="falseS" aria-controls="collapseOne">
+                        <button class="accordion-button collapsed" style="color: #adb5bd; --bs-accordion-active-color: #ffc107; background-color: #212529;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="falseS" aria-controls="collapseOne">
                             Carga de Animales
                         </button>
                     </h2>
@@ -92,7 +92,7 @@
                                         <input type="text" name="telefono_persona" placeholder="Telefono del Dueño" size="24" />
                                     </div>           
                                     <div>
-                                        <button type="submit" name="formperro" class="btn btn-warning btn-lg">Cargar</button>
+                                        <button type="submit" name="formperro" class="btn btn-dark btn-lg">Cargar</button>
                                     </div>           
                                 </fieldset>
                             </form>
@@ -161,5 +161,3 @@
         header("location:index.php");
     }
 ?>
-<!-- Clave foranea
-ALTER TABLE animales ADD FOREIGN KEY(dni_persona) REFERENCES personas(dni); -->

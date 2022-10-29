@@ -36,8 +36,8 @@
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                             </div>
                             <div class="botones">
-                                <button type="submit" value="" name="ingresar" class="btn btn-warning btn-lg">Ingresar</button>
-                                <a class="btn btn-warning btn-lg" href="noticias.php">Noticias</a>
+                                <button type="submit" value="" name="ingresar" class="btn btn-dark btn-lg">Ingresar</button>
+                                <a class="btn btn-dark btn-lg" href="noticias.php">Noticias</a>
                             </div>
                         </form>
                     </div>
