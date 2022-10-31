@@ -184,7 +184,7 @@ if($session == null) {
             
             ?>
             </table>
-            
+<!---------------------------------- Menu de paginacion ---------------------------------->           
         <?php
             $pagLink= "";
             if($page>=2){   

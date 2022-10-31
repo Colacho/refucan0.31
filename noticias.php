@@ -111,6 +111,7 @@ session_start();
                         ?>
                             </tbody>
                         </table>
+<!---------------------------------- Menu de paginacion ---------------------------------->
                         <?php
                             $pagLink= "";
                             if($page>=2){   
