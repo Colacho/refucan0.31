@@ -30,6 +30,7 @@ if($session == null) {
 
 		<?php
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		//------------ Fecha para la actualizacion de vacunas
 				date_default_timezone_set('America/Argentina/Buenos_Aires');
 				$fechaActual = date("Y-m-d");
 				$id = $_POST['animal_id'];
@@ -48,7 +49,7 @@ if($session == null) {
 		<form id="p" method="POST" enctype="multipart/form-data">
 			<legend>Datos a modificar</legend>
 			<div class="editarField" >
-				<!-- DATOS DEL ANIMAL -->
+<!----------------------------------- DATOS DEL ANIMAL ------------------------------------------------------------------------>
 				<div class="editarCampos">
 					<input style="display: none;" name="animal_id"  value="<?Php echo $row['animal_id'] ?>">
 					<div>
@@ -120,7 +121,7 @@ if($session == null) {
 						<input value="<?php echo $row['telefono_persona']?>" name="telefono_persona">
 					</div>
 				</div>
-				<!-- HISTORIA CLINICA -->
+<!--------------------------------- DATOS HISTORIA CLINICA ----------------------------------------->
 				<div class="editarCampos">                        
 					<div>
 						<?php
@@ -220,9 +221,9 @@ if($session == null) {
 						<label>Datos de busqueda:</label><br>
 						<textarea cols="40" rows="5" name="buscado_datos"><?php echo $row['buscado_datos']?></textarea>
 					</div>
+<!------------------------------------- Mapea la base de datos en busca de protectoras ------------------------------------------------->
 					<div>
 						<label>Protectora:</label><br>
-						<!-- Mapea la base de datos en busca de protectoras -->
 						<label for="protectora">Seleccione protectora:</label>
 							<select name="protectora" id="protectora">
 								<option value="<?php echo $row['protectora']?>"><?php echo $row['protectora']?></option>    
@@ -238,6 +239,7 @@ if($session == null) {
 								?>
 							</select>
 					</div>
+<!------------------------------------ FIN Mapea la base de datos en busca de protectoras ------------------------------------------------->
 				</div>
 			</div>
 				<div class="botones">
@@ -257,7 +259,7 @@ if($session == null) {
 </body>
 </html>       
 
-
+<!--------------------------------------- CONSULTA --------------------------------------->
 <?php
 if(isset($_POST['modificar'])) {
 
@@ -304,6 +306,7 @@ if(isset($_POST['modificar'])) {
 	$resultado = mysqli_query($con, $sql4) or die('Error de consulta');
 
     mysqli_close($con);
-		
+	
+	header("location:index.php");
 }
 ?>

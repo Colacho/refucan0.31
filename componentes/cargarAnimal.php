@@ -53,13 +53,13 @@
                                         <label>Cargar Foto del Animal:</label><br>
                                         <input type="file" name="foto">
                                     </div>
+<!-- ------------------------------------------------ Mapea la base de datos en busca de protectoras --------------------------------------------- -->
                                     <div>
-                                        <!-- Mapea la base de datos en busca de protectoras -->
                                         <label for="protectora_nombre">Seleccione protectora:</label>
                                         <select name="protectora_nombre" id="protectora_nombre">    
                                             <?php
                                                 $con = mysqli_connect('localhost', 'root', '', 'refucan') or die('Error al conectarse');
-                                                $consulta = "SELECT * FROM protectoras";
+                                                $consulta = "SELECT * FROM protectoras WHERE activo != 'No'";
                                                 $resultado = mysqli_query($con, $consulta);
                                                 while($row = mysqli_fetch_assoc($resultado)) { 
                                                     echo '
@@ -70,7 +70,7 @@
                                             ?>
                                         </select>
                                     </div>
-                                        
+<!-- -------------------------------------------------Fin de mapeo en busca de protectoras---------------------------------------------------------- -->
                                     <div>
                                         <label>Nombre Dueño:</label>
                                         <input type="text" name="nombre_persona" size="30" require/>
@@ -100,7 +100,7 @@
                         </div>
                     </div>
                 </div>
-
+<!--------------------------------------- CONSULTA --------------------------------------->
 <?php
     if (isset($_POST['formperro'])) {
         

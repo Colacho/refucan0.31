@@ -33,6 +33,7 @@ if($session == null) {
                 </div>
                 <div class="botones">         
                     <a class="btn btn-dark btn-lg" role="button" href="buscar.php">Buscar</a>
+                    <a class="btn btn-dark btn-lg" role="button" href="buscarProtectoras.php">Protectoras</a>
                     <a class="btn btn-dark btn-lg" role="button" href="noticias.php">Noticias</a>
                     <a class="btn btn-dark btn-lg" role="button" href="cargar.php">Cargar</a>    
                 </div>

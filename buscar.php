@@ -90,7 +90,7 @@ if($session == null) {
                     mysqli_close($con);
                    
             ?>
-            <!-- TABLA     -->
+<!------------------------------- TABLA ------------------------------------------------------>
             
             <table class="table table-light table-striped table-lg">
                     <thead class="table table-dark">
@@ -106,7 +106,7 @@ if($session == null) {
                 <?php   
                     while($row = mysqli_fetch_assoc($resultadoLimitado)) {          
                 ?>
-                             
+<!--------------------------------- FORMULARIO PARA EDICION ------------------------------>
                 <tbody >
                     <form method="POST" action="modificar.php">
                         <tr>
@@ -178,6 +178,7 @@ if($session == null) {
                         </tr>
                     </form>
                 </tbody>
+<!-------------------------------------- FIN FORMULARIO PARA EDICION --------------------------------------------------------------------->
                 <?php                
             }     
             

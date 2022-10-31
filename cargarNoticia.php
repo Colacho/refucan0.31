@@ -19,8 +19,8 @@
                         <legend>Nueva Noticia</legend>
                         <textarea cols="40" rows="5" name="texto"></textarea><br>
                         <div class="botones">
-                            <button type="submit" name="carga" class="btn btn-warning btn-lg">Cargar</button>
-                            <button class="btn btn-warning btn-lg" ><a href="noticias.php">Volver</a></button>
+                            <button type="submit" name="carga" class="btn btn-dark btn-lg">Cargar</button>
+                            <a class="btn btn-dark btn-lg" role="button" href="noticias.php">Volver</a>
                         </div>
                     </fieldset>
                 </form>

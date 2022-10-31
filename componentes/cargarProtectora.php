@@ -38,6 +38,7 @@
         </div>
     </div>
 </div>
+<!--------------------------------------- CONSULTA --------------------------------------->
 <?php
 if (isset($_POST['protectora'])) {
     $con = mysqli_connect('localhost', 'root', '', 'refucan') or die('Error al conectarse');
@@ -48,7 +49,8 @@ if (isset($_POST['protectora'])) {
         '".$_POST["responsable_nombre"]."', 
         '".$_POST["responsable_apellido"]."', 
         '".$_POST["responsable_dni"]."', 
-        '".$_POST["telefono"]."'   
+        '".$_POST["telefono"]."',
+        'Si'   
         )";
         $resultado = mysqli_query($con, $sql) or die('Error de consulta');
     mysqli_close($con);

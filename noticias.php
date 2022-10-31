@@ -17,7 +17,7 @@ session_start();
         ?>
         <main class="">
             <div class="central">
-                <!-- INICIO CARRUSEL -->
+<!----------------------------- INICIO CARRUSEL --------------------------------------->
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -30,6 +30,7 @@ session_start();
                         <div class="carousel-item active">
                             <img style="max-height: 200px;" src="images/buscado.png" class="d-block w-100" alt="...">
                         </div>
+                <!------------------Consulta la base de datos con valor buscado ----------------->
                     <?php 
                      $con = mysqli_connect('localhost', 'root', '', 'refucan') or die('Error al conectarse');
                     
@@ -56,7 +57,7 @@ session_start();
                     </button>
                 </div>
             </div>
-                <!-- FIN CARRUSEL -->
+<!-------------------------------- FIN CARRUSEL -------------------------------------------->
 
                 <div class="botones">
                     <a class="btn btn-dark btn-lg" role="button" href="index.php">Volver</a>

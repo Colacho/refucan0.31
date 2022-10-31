@@ -13,12 +13,12 @@ $resultado=mysqli_query($conexion,$consulta);
 $filas=mysqli_fetch_array($resultado);
 $cargo = $filas['cargo_id'];
 $_SESSION['cargo']=$cargo; 
-if($filas['cargo_id']==1){ //administrador
+if($cargo==1){ //administrador
     
     header("location:index.php");
 
 }else
-if($filas['cargo_id']==2){ //cliente
+if($cargo==2){ //cliente
     
     header("location:index.php");
 }
